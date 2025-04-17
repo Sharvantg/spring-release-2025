@@ -181,7 +181,7 @@ const HeroSection = () => {
         <div
           id="enrollment-improvement"
           className="content-wrapper"
-          style={{ marginLeft: "40px" }}
+          style={{ marginLeft: "20px" }}
         >
           <h2>Enrollment Improvements</h2>
         </div>
