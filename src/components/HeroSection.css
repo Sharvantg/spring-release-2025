@@ -1,0 +1,316 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Schibsted+Grotesk:wght@400;500;700&display=swap");
+
+.hero-container {
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  background-color: #ecddd3;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  /* No need to specify font-family here as it's applied via className */
+}
+
+.landscape-section {
+  height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  float: left;
+  background-color: #ecddd3;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #e23dd3;
+}
+
+.site-header {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 0;
+  color: #4a0d2c;
+  margin-bottom: 1rem;
+  z-index: 3;
+}
+
+.header-line {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.triangle {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #ab8aa0;
+}
+
+.triangle-flipped {
+  transform: rotate(180deg);
+  margin-right: 20px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #ab8aa0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.release-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.two-column-layout {
+  display: flex;
+  flex: 1;
+  padding: 0 4rem;
+  gap: 0rem;
+  height: 100%;
+}
+
+.left-column {
+  flex: 3;
+  display: flex;
+  min-width: 70vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  height: 100%;
+  padding-top: 2rem;
+}
+
+.right-column {
+  position: sticky;
+  left: 10px;
+  z-index: 10000000;
+  min-width: 25vw;
+  justify-content: space-between;
+  padding: 4rem 0 2rem 0;
+
+  background-color: #ecddd3;
+}
+
+.hero-content {
+  width: 100%;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-right: 8rem;
+}
+
+.flower-container {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  /* overflow: visible; */
+}
+
+.flower-shadow,
+.flower-stem {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  transform: translate(10%, -15%) scale(1.05);
+  width: 100%; /* Increased from 120% to 150% */
+  height: auto;
+  z-index: -1;
+  max-width: none; /* Ensure no max-width constraint */
+}
+
+.flower-stem {
+  z-index: 200;
+}
+
+.flower-shadow {
+  z-index: 1;
+}
+
+.hero-title {
+  display: flex;
+  font-size: 9rem;
+  line-height: 1.05;
+  color: #4a0d2c;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  /* Removing font-family as it's now applied selectively via className */
+  /* font-family: "Libre Caslon Text", serif; */
+}
+
+/* .title-left,
+.title-right {
+  display: flex;
+  flex-direction: column;
+} */
+
+.title-left {
+  text-align: left;
+  flex: 6; /* 60% of the space */
+}
+
+.text-right {
+  text-align: right;
+  margin-right: 60px;
+  font-family: "GT-Alpina-Italic", serif;
+  font-style: italic;
+}
+
+.title-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+
+  margin-top: 6rem;
+  flex: 4; /* 40% of the space */
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #4a0d2c;
+  max-width: 500px;
+  line-height: 1.2;
+  width: 60%;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+}
+
+.table-of-contents {
+  padding: 2rem 0;
+  width: 80%;
+  margin-bottom: auto;
+  z-index: 10000;
+}
+
+.table-of-contents h2 {
+  color: #4a0d2c;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.table-of-contents ol {
+  list-style-position: outside;
+  list-style-type: decimal !important;
+  padding-left: 1.5rem;
+}
+
+.table-of-contents li {
+  border-top: 1px solid rgba(74, 13, 44, 0.1);
+  padding-top: 10px;
+  margin-bottom: 10px;
+  display: list-item;
+  list-style-position: outside;
+  position: relative;
+  z-index: 1;
+}
+
+.table-of-contents li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.table-of-contents a {
+  color: #4a0d2c;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.table-of-contents li:hover a,
+.table-of-contents a:hover {
+  font-weight: 600;
+}
+
+.table-of-contents a::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1.5rem;
+}
+
+.table-of-contents li::marker {
+  color: #4a0d2c;
+  transition: all 0.3s ease;
+}
+
+.table-of-contents li:hover::marker {
+  font-weight: 600;
+}
+
+.author {
+  font-size: 0.8rem;
+  color: #ab8aa0;
+  display: block;
+  font-style: italic;
+}
+
+.arrow {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.site-footer {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a0d2c;
+  margin-top: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(74, 13, 44, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.progress {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+  color: #4a0d2c;
+}
+
+.landscape-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
